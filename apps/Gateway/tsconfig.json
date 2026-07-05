@@ -17,7 +17,8 @@
       "*": ["./*"],
       "@/config/*": ["./src/config/*"],
       "@/rest/*": ["./src/rest/*"],
-      "@/dtos/*": ["./src/dtos/*"]
+      "@/dtos/*": ["./src/dtos/*"],
+      "@/services/*": ["./src/services/*"]
     },
 
     "incremental": true,
