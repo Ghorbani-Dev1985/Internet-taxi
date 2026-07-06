@@ -9,13 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DriverSignUpInputDto = void 0;
+exports.DriverRequestOtpInputDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
-class DriverSignUpInputDto {
+class DriverRequestOtpInputDto {
     phone;
 }
-exports.DriverSignUpInputDto = DriverSignUpInputDto;
+exports.DriverRequestOtpInputDto = DriverRequestOtpInputDto;
 __decorate([
     (0, swagger_1.ApiProperty)({
         type: String,
@@ -25,5 +25,5 @@ __decorate([
     }),
     (0, class_validator_1.IsPhoneNumber)('IR', { message: 'شماره تلفن معتبر وارد نمایید.' }),
     __metadata("design:type", String)
-], DriverSignUpInputDto.prototype, "phone", void 0);
+], DriverRequestOtpInputDto.prototype, "phone", void 0);
 //# sourceMappingURL=driver.dto.js.map

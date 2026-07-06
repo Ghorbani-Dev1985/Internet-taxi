@@ -2,7 +2,7 @@ import { registerAs } from '@nestjs/config';
 
 const AppConfig = registerAs('App', () => ({
   version: 'v1',
-  port: 3001,
+  port: 3002,
 }));
 
 const SwaggerConfig = registerAs('Swagger', () => ({

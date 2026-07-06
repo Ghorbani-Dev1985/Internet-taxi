@@ -4,7 +4,7 @@ exports.configurations = void 0;
 const config_1 = require("@nestjs/config");
 const AppConfig = (0, config_1.registerAs)('App', () => ({
     version: 'v1',
-    port: 3001,
+    port: 3002,
 }));
 const SwaggerConfig = (0, config_1.registerAs)('Swagger', () => ({
     title: 'internet-taxi',
