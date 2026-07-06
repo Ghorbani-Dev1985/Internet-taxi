@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DriverRequestOtpInputDto } from 'src/dtos/driver.dto';
+import { handleSrvCliResponse } from 'src/response/httpException.filter';
 import { MainServiceClient } from 'src/services/main.service';
 
 @Injectable()
@@ -11,6 +12,6 @@ export class DriverAuthService {
       action: 'requestOtp',
       query: body,
     });
-    return data
+    return handleSrvCliResponse(data)
   }
 }

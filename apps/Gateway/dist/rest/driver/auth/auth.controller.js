@@ -17,6 +17,8 @@ const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
 const swagger_1 = require("@nestjs/swagger");
 const driver_dto_1 = require("../../../dtos/driver.dto");
+const httpException_filter_1 = require("../../../response/httpException.filter");
+const response_interceptors_1 = require("../../../response/response.interceptors");
 let DriverAuthController = class DriverAuthController {
     driverAuthService;
     constructor(driverAuthService) {
@@ -37,7 +39,10 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], DriverAuthController.prototype, "requestOtp", null);
 exports.DriverAuthController = DriverAuthController = __decorate([
+    (0, swagger_1.ApiTags)('Driver:Auth'),
     (0, common_1.Controller)('Auth'),
+    (0, common_1.UseFilters)(httpException_filter_1.HttpExceptionFilter),
+    (0, common_1.UseInterceptors)(response_interceptors_1.ResponseInterceptor),
     __metadata("design:paramtypes", [auth_service_1.DriverAuthService])
 ], DriverAuthController);
 //# sourceMappingURL=auth.controller.js.map

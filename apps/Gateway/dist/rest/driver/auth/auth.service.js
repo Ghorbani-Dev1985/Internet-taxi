@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DriverAuthService = void 0;
 const common_1 = require("@nestjs/common");
+const httpException_filter_1 = require("../../../response/httpException.filter");
 const main_service_1 = require("../../../services/main.service");
 let DriverAuthService = class DriverAuthService {
     mainSerCli;
@@ -23,7 +24,7 @@ let DriverAuthService = class DriverAuthService {
             action: 'requestOtp',
             query: body,
         });
-        return data;
+        return (0, httpException_filter_1.handleSrvCliResponse)(data);
     }
 };
 exports.DriverAuthService = DriverAuthService;
